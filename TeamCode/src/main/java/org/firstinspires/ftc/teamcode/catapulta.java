@@ -1,31 +1,41 @@
-/*package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode;
 
 
+
+/// program cu explicati
+
+
+
+// biblioteci ⬇️
+import com.acmerobotics.dashboard.config.Config;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.acmerobotics.dashboard.FtcDashboard; //asta am pus
-
-
-
+import com.acmerobotics.dashboard.FtcDashboard;
+@Config // obligatoriu pentru FtcDashbord
 @TeleOp(name="catapulta")
 public class catapulta extends LinearOpMode {
+   FtcDashboard dashboard;  // important din punct de vedere necunoscut
 
-   FtcDashboard dashboard;
+  // daca vrei sa schimbi variabilele in FtcDashbord ele trebuie sa fie publice
 
     public void runOpMode() throws InterruptedException {
+
         // dupa apasarea butonului init
+        // "Dcmotor/Servo" - data type, ca si "int" in c++;   "motor1"-este denumiria portului (motorului)
+        //          ⬇️
         DcMotor motorDreapta = hardwareMap.get(DcMotor.class, "motor1");
         DcMotor motorStanga = hardwareMap.get(DcMotor.class, "motor2");
         Servo motorServo1 = hardwareMap.get(Servo.class, "servo1");
         Servo motorServo2 = hardwareMap.get(Servo.class, "servo2");
         motorServo1.setDirection(Servo.Direction.REVERSE);
 
-        waitForStart();
-
+        waitForStart();// ii spui programului sa astepte sa ii dai play
         while (opModeIsActive()) {
+
+            // "gamepad1" si "gamepad2" butoane/... de pe cela doua manete
 
             boolean butonx = gamepad1.x;
             boolean bababuia = false;
@@ -61,8 +71,8 @@ public class catapulta extends LinearOpMode {
 
             }
 
+          ///  !!!! Motoarele Servo nu are -1 (in cazul in care pui el se va returna la pozitia 0)
 
         }
     }
 }
-*/

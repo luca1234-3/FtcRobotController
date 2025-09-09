@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode;
+/*package org.firstinspires.ftc.teamcode;
 
 
 import com.acmerobotics.dashboard.config.Config;
@@ -34,3 +34,4 @@ public class servo_test extends LinearOpMode {
         }
     }
 }
+*/
